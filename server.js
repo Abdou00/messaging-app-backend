@@ -7,7 +7,7 @@ import 'dotenv/config.js'
 
 //App Config
 const app = express()
-const port = process.env.PORT || 9000
+const port = process.env.PORT || 10000
 const username = process.env.DB_USERNAME;
 const password = process.env.DB_PASSWORD;
 const cluster = process.env.DB_CLUSTER;
