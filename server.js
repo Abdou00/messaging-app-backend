@@ -8,16 +8,16 @@ import 'dotenv/config.js'
 //App Config
 const app = express()
 const port = process.env.PORT || 9000
-const username = "samba4292";
-const password = "Kv50jOVE4APIu5On";
-const cluster = "clustermessaging.6cfgiio";
-const dbname = "messaging-app";
+const username = process.env.DB_USERNAME;
+const password = process.env.DB_PASSWORD;
+const cluster = process.env.DB_CLUSTER;
+const dbname = process.env.DB_NAME;
 const connection_url = `mongodb://${username}:${password}@${cluster}.mongodb.net/${dbname}?retryWrites=true&w=majority`;
 
 const pusher = new Pusher({
-    appId: "1724115",
-    key: "9ac38e9870e78f9c9f87",
-    secret: "54507b486204308077ab",
+    appId: process.env.APPID,
+    key: process.env.PUSHER_KEY,
+    secret: process.env.PUSHER_SECRET,
     cluster: "eu",
     useTLS: true
 });
