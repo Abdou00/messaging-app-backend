@@ -3,6 +3,7 @@ import mongoose from 'mongoose'
 import Cors from 'cors'
 import Messages from './dbMessages.js'
 import Pusher from 'pusher'
+import 'dotenv/config.js'
 
 //App Config
 const app = express()
